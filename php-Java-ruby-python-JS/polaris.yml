@@ -1,0 +1,19 @@
+version: "1"
+project:
+  name: excel-column-generator-go
+  branch: excel-column-generator-go
+  revision:
+    name: excel-column-generator-go
+    date: "2021-09-13T13:42:40Z"
+capture:
+  build:
+    cleanCommands:
+    - shell: [go, clean]
+    buildCommands:
+    - shell: [go, build]
+analyze:
+  mode: central
+install:
+  coverity:
+    version: default
+serverUrl: https://qa.dev.polaris.synopsys.com
