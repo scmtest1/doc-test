@@ -36,6 +36,13 @@ def unreachable_to_fix(cond, message)
 	end
 end
 
+def unreachable_to_fix_v1(cond, message)
+	if (cond)
+		raise RuntimeError, message
+		log("Fatal error: 2" + message) # Defect here.
+	end
+end
+
 def identical_branches(a, b, op)
 	if op == '+' # IDENTICAL_BRANCHES defect
 		a + b
