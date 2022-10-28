@@ -70,6 +70,12 @@ class KeysTest(unittest.TestCase):
             x = x + z
         if (a and b):
             y = x + z # A COPY_PASTE_ERROR here
+            
+   def copy_paste_error2(a, b):
+        if (a and b):
+            x = x + z
+        if (a and b):
+            y = x + z # A COPY_PASTE_ERROR here duplicated method to produce more error      
                 
     def forward_null_example(obj):
         if (obj is not None):
